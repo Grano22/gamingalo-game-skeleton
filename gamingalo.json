@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@gamingalo/cli/schemas/gamingalo.schema.json",
+  "schemaVersion": 2,
+  "id": "my-game",
+  "title": "My game",
+  "version": "1.0.0",
+  "dir": "dist",
+  "entry": "index.html",
+  "budgets": {
+    "maxTotalBytes": 5000000,
+    "maxFileBytes": 2000000,
+    "maxFiles": 200
+  },
+  "plugins": {
+    "@gamingalo/plugin-screen-preferences": {
+      "limits": { "brightness": { "min": 0.7, "max": 1.3 } }
+    }
+  }
+}

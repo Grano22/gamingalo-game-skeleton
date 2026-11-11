@@ -1,0 +1,37 @@
+{
+  "name": "my-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A web game built with the Gamingalo SDK",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate": "npm run build && gamingalo game:validate",
+    "publish:preview": "npm run build && gamingalo game:publish --channel preview",
+    "publish:production": "npm run build && gamingalo game:publish --channel production",
+    "ai:sync": "node scripts/sync-ai.mjs",
+    "ai:check": "node scripts/sync-ai.mjs --check",
+    "ai:memory": "uvx --prerelease=allow basic-memory project add my-game docs/memory",
+    "check": "npm run typecheck && npm run test && npm run ai:check && npm run validate"
+  },
+  "dependencies": {
+    "@gamingalo/plugin-screen-preferences": "^0.2.0",
+    "@gamingalo/sdk": "^0.14.0"
+  },
+  "devDependencies": {
+    "@gamingalo/cli": "^0.1.0",
+    "@gamingalo/vite-plugin": "^0.1.0",
+    "happy-dom": "^21.0.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

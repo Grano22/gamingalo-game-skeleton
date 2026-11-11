@@ -1,0 +1,11 @@
+# Project settings for OpenAI Codex. Codex loads them only after you trust this project.
+# Skills are read from .agents/skills, and instructions from AGENTS.md.
+
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+project_doc_max_bytes = 65536
+
+[mcp_servers.basic-memory]
+command = "uvx"
+args = ["--prerelease=allow", "basic-memory", "mcp"]
+startup_timeout_sec = 30

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run typecheck)",
+      "Bash(npm test)",
+      "Bash(npm run test)",
+      "Bash(npm run validate)",
+      "Bash(npm run check)",
+      "Bash(npm run ai:sync)",
+      "Bash(npm run ai:check)",
+      "Bash(npx gamingalo game:validate *)",
+      "Bash(npx gamingalo game:versions *)"
+    ],
+    "ask": [
+      "Bash(npm run publish:preview)",
+      "Bash(npm run publish:production)",
+      "Bash(npx gamingalo game:publish *)",
+      "Bash(npx gamingalo game:promote *)",
+      "Bash(npx gamingalo game:rollback *)",
+      "Bash(git push *)"
+    ],
+    "deny": ["Read(./.env)", "Read(./.env.*)", "Read(~/.config/gamingalo/**)"]
+  },
+  "enabledMcpjsonServers": ["basic-memory"]
+}

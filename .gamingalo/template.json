@@ -1,0 +1,9 @@
+{
+  "formatVersion": 1,
+  "placeholders": {
+    "id": "my-game",
+    "title": "My game"
+  },
+  "files": ["package.json", "gamingalo.json", "index.html", "README.md", "AGENTS.md"],
+  "remove": ["TEMPLATE.md", ".gamingalo"]
+}

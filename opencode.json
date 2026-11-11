@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": [".agents/skills"],
+  "mcp": {
+    "servers": {
+      "basic-memory": {
+        "type": "local",
+        "command": ["uvx", "--prerelease=allow", "basic-memory", "mcp"]
+      }
+    }
+  },
+  "permissions": [
+    { "action": "shell", "resource": "npx gamingalo game:publish*", "effect": "ask" },
+    { "action": "shell", "resource": "npx gamingalo game:promote*", "effect": "ask" },
+    { "action": "shell", "resource": "npx gamingalo game:rollback*", "effect": "ask" },
+    { "action": "shell", "resource": "npm run publish:*", "effect": "ask" },
+    { "action": "shell", "resource": "git push *", "effect": "ask" }
+  ]
+}
